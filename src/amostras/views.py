@@ -3,9 +3,9 @@ from .forms import AmostraForm
 from .forms import Amostra
 # Create your views here.
 
-def mostrar_amostras(request):
-    amostras = get_object_or_404(Amostra)
-    return render(request, 'amostras/mostrar_amostras.html', {'amostras': amostras})
+def detalhes_das_amostras(request):
+    amostras = Amostra.objects.all()
+    return render(request, 'amostras/detalhes_das_amostras.html', {'amostras': amostras})
 
 
 
