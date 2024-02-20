@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes das amostras</title>
+</head>
+<body>
+    <h2>Detalhes das Amostras</h2>
+    <ul>
+        {% for amostra in amostras %}
+        <li>
+            <p><strong>Nome:</strong> {{ amostra.nome }}</p>
+            <p><strong>Descrição:</strong> {{ amostra.descricao }}</p>
+            <p><strong>Data de Coleta:</strong> {{ amostra.data_coleta }}</p>
+            <p><strong>Quantidade da Solução:</strong> {{ amostra.quantidade_solucao }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
