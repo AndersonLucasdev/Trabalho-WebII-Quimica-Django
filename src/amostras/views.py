@@ -1,10 +1,10 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, HttpResponse
 from .forms import AmostraForm
 from .forms import Amostra
 # Create your views here.
 
 def index():
-    return render("Ola mundo!")
+    return HttpResponse("Esta é a página inicial.")
 
 def detalhes_das_amostras(request):
     amostras = Amostra.objects.all()
